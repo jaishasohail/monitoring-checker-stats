@@ -1,0 +1,41 @@
+A JSON metrics file at the path defined in output_path (default data/sample_output.json)
+
+5. Understanding The Output
+Each object in the output array contains:
+
+resource_id: the id from your configuration
+
+response_time: response time in milliseconds for the last check
+
+uptime_percentage: simplified uptime over the last check (100 for success, 0 for failure)
+
+last_checked: timestamp of when the check was performed in UTC
+
+status:
+
+active when the check succeeded and response was fast
+
+warning when the check succeeded but was slower than the configured threshold
+
+down when the check failed
+
+error_count: number of errors detected in the last run (0 or 1 in this implementation)
+
+Example:
+json[
+  {
+    "resource_id": "api_server_01",
+    "response_time": 182,
+    "uptime_percentage": 100.0,
+    "last_checked": "2025-11-10T08:45:00Z",
+    "status": "active",
+    "error_count": 0
+  }
+]
+
+6. Running Tests
+The project uses pytest for tests.
+From the project root:
+bashpytest
+
+This runs:
