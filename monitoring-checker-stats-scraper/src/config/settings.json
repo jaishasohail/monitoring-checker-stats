@@ -1,0 +1,16 @@
+{
+  "output_path": "data/sample_output.json",
+  "log_dir": "data/logs",
+  "timeout_seconds": 5,
+  "warning_response_time_ms": 300,
+  "resources": [
+    {
+      "id": "api_server_01",
+      "url": "https://httpbin.org/get"
+    },
+    {
+      "id": "db_cluster_02",
+      "url": "https://httpbin.org/delay/1"
+    }
+  ]
+}
