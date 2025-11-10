@@ -1,0 +1,42 @@
+Key fields:
+
+output_path
+Relative path to the JSON file where metrics will be written.
+
+log_dir
+Directory where log files will be stored.
+
+timeout_seconds
+Request timeout per resource in seconds.
+
+warning_response_time_ms
+Threshold in milliseconds after which a successful response is treated as warning.
+
+resources
+A list of resources to monitor. Each resource needs:
+
+id: unique identifier for the resource
+
+url: HTTP or HTTPS endpoint to check
+
+Example:
+json{
+  "output_path": "data/sample_output.json",
+  "log_dir": "data/logs",
+  "timeout_seconds": 5,
+  "warning_response_time_ms": 300,
+  "resources": [
+    {
+      "id": "api_server_01",
+      "url": "https://httpbin.org/get"
+    },
+    {
+      "id": "db_cluster_02",
+      "url": "https://httpbin.org/delay/1"
+    }
+  ]
+}
+
+You can duplicate settings.json and adapt it for different environments if needed.
+4. Running the Scraper
+From the project root:
