@@ -1,0 +1,18 @@
+[
+  {
+    "resource_id": "api_server_01",
+    "response_time": 182,
+    "uptime_percentage": 99.92,
+    "last_checked": "2025-11-10T08:45:00Z",
+    "status": "active",
+    "error_count": 0
+  },
+  {
+    "resource_id": "db_cluster_02",
+    "response_time": 310,
+    "uptime_percentage": 98.74,
+    "last_checked": "2025-11-10T08:45:00Z",
+    "status": "warning",
+    "error_count": 2
+  }
+]
